@@ -1,0 +1,24 @@
+﻿@model ChequeClient.Models.ChequeDetails
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cheque Information</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>
+                 @Html.ListBoxFor(m => m.LeftselectedItem, Model.ListOfMenu, new { size = 10 })
+            </th>
+            <th>
+                @Html.ListBoxFor(m => m.RightselectedItem, Model.SelectedMenuItem, new { size = 10 }) 
+            </th>
+        </tr>
+   </table>
+
+    
+    
+}

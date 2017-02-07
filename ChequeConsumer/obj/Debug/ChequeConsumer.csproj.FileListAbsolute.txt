@@ -1,0 +1,8 @@
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\bin\Debug\ChequeConsumer.dll.config
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\bin\Debug\ChequeConsumer.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\bin\Debug\ChequeConsumer.pdb
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\bin\Debug\ChequeBusinessData.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\bin\Debug\ChequeBusinessData.pdb
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\obj\Debug\ChequeConsumer.csprojResolveAssemblyReference.cache
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\obj\Debug\ChequeConsumer.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeConsumer\obj\Debug\ChequeConsumer.pdb

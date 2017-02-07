@@ -1,0 +1,4 @@
+C:\Deployments\2015-07-30\ChequeAppsService\SOAPWebService\bin\ChequeSOAPWebService.dll
+C:\Deployments\2015-07-30\ChequeAppsService\SOAPWebService\bin\ChequeSOAPWebService.pdb
+C:\Deployments\2015-07-30\ChequeAppsService\SOAPWebService\obj\Debug\ChequeSOAPWebService.dll
+C:\Deployments\2015-07-30\ChequeAppsService\SOAPWebService\obj\Debug\ChequeSOAPWebService.pdb

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9b61da2-7b33-4859-811c-53830165ea69" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59525/RESTChequeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RESTChequeService.disco" MetadataType="Disco" ID="20372f1d-626f-4e6a-af8e-4fcc2eb6216f" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?disco" />
+    <MetadataFile FileName="RESTChequeService.xsd" MetadataType="Schema" ID="12a5ea4b-a730-4ea8-9e06-da8a13448c70" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RESTChequeService1.xsd" MetadataType="Schema" ID="1cd7417f-1ae3-438d-92c5-a8e556475911" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RESTChequeService.wsdl" MetadataType="Wsdl" ID="e5b8c102-d61f-4886-9ebe-62657dceee46" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

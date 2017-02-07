@@ -1,0 +1,7 @@
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\bin\ChequeRESTService.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\bin\ChequeRESTService.pdb
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\bin\ChequeBusinessData.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\bin\ChequeBusinessData.pdb
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\obj\Debug\ChequeRESTService.csprojResolveAssemblyReference.cache
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\obj\Debug\ChequeRESTService.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeRESTService\obj\Debug\ChequeRESTService.pdb
