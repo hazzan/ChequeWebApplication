@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChequeBusinessData", "Chequ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChequeClient", "ChequeClient\ChequeClient.csproj", "{E9AD1FD7-175D-438A-8F4B-5E0B6029F853}"
 	ProjectSection(ProjectDependencies) = postProject
+		{79150D00-93A6-41CD-8B52-2DD5A36F7538} = {79150D00-93A6-41CD-8B52-2DD5A36F7538}
 		{86984EC2-6AAA-4718-8CDE-672F605AF870} = {86984EC2-6AAA-4718-8CDE-672F605AF870}
 	EndProjectSection
 EndProject

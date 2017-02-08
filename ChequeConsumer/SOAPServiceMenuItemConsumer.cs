@@ -13,12 +13,8 @@ namespace ChequeConsumer
     {
         public static List<MenuItemDto> LoadMenuItemUsingSoapService()
         {
-            SoapWebService.ChequeSOAPServiceSoapClient SoapService = new SoapWebService.ChequeSOAPServiceSoapClient();
-            string menuItemXML = SoapService.GetAllMenuItems();
-            XmlReader reader = XmlReader.Create(new StringReader(menuItemXML));
-            XmlSerializer serializer = new XmlSerializer(typeof(List<MenuItemDto>));
-            List<MenuItemDto> menuList = (List<MenuItemDto>)serializer.Deserialize(reader);
-            return menuList;
+            
+            return new List<MenuItemDto>();
         }
 
     }

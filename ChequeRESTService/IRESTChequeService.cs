@@ -14,8 +14,8 @@ namespace ChequeRESTService
     public interface IRESTChequeService
     {
         [OperationContract]
-        [WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped, UriTemplate = "/SaveMenuItem")]
-        void SaveMenuItem(int listBillingInfo);
+        [WebInvoke(ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json, Method = "POST", UriTemplate = "/SaveMenuItem")]
+        void SaveMenuItem(List<BillingInformation> listBillingInfo);
         [OperationContract]
         [WebInvoke(Method="GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle=WebMessageBodyStyle.Wrapped, UriTemplate = "/MenuItem")]
         string MenuItem(); 

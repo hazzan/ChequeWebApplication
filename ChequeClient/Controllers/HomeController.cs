@@ -25,8 +25,9 @@ namespace ChequeClient.Controllers
         public ActionResult RESTBilling() 
         {
             ChequeDetails cheque = new ChequeDetails();
+            MenuItemConsumer menuItemConsomer = new MenuItemConsumer();
             List<MenuItems> menuSelectList = new List<MenuItems>();
-            var listMenuItem = MenuItemConsumer.LoadMenuItem();
+            var listMenuItem = menuItemConsomer.LoadMenuItem();
             foreach (MenuItemDto item in listMenuItem)
             {
                 MenuItems menuItem = new MenuItems()
@@ -40,6 +41,8 @@ namespace ChequeClient.Controllers
                 menuSelectList.Add(menuItem);
             }
             cheque.ListOfMenu = menuSelectList ?? new List<MenuItems>();
+            cheque.InvoiceDate = DateTime.Now.ToString();
+            cheque.Invoicenumber = "23-23-2222-22";
             cheque.SelectedMenuItem = new List<MenuItems>();
 
             return View("Billing", cheque);
@@ -72,7 +75,7 @@ namespace ChequeClient.Controllers
         public ActionResult SaveBillingInformation(List<BillingDetails> listBillingDetails)
         {
             List<BillingInformationDto> listBillingInfo = new List<BillingInformationDto>();
-
+            MenuItemConsumer menuConsum = new MenuItemConsumer();
             foreach (BillingDetails item in listBillingDetails)
             {
                 BillingInformationDto billingInfo = new BillingInformationDto()
@@ -85,11 +88,11 @@ namespace ChequeClient.Controllers
 
                 listBillingInfo.Add(billingInfo);
             }
+            menuConsum.InsertChequeInformation(listBillingInfo);
 
-
-          //  string status = MenuItemConsumer.InsertChequeInformation(listBillingInfo);
             return View();
         }
+
 
        
 

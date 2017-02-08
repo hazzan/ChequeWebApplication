@@ -16,7 +16,7 @@ namespace ChequeConsumer.ChequeRESTService {
     public interface IRESTChequeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRESTChequeService/SaveMenuItem", ReplyAction="http://tempuri.org/IRESTChequeService/SaveMenuItemResponse")]
-        void SaveMenuItem(int listBillingInfo);
+        void SaveMenuItem(ChequeBusinessData.Entity.BillingInformation[] listBillingInfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRESTChequeService/MenuItem", ReplyAction="http://tempuri.org/IRESTChequeService/MenuItemResponse")]
         string MenuItem();
@@ -49,7 +49,7 @@ namespace ChequeConsumer.ChequeRESTService {
                 base(binding, remoteAddress) {
         }
         
-        public void SaveMenuItem(int listBillingInfo) {
+        public void SaveMenuItem(ChequeBusinessData.Entity.BillingInformation[] listBillingInfo) {
             base.Channel.SaveMenuItem(listBillingInfo);
         }
         

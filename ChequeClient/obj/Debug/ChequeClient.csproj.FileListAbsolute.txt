@@ -18,6 +18,7 @@ C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages.dll
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages.Razor.dll
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\WebGrease.dll
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\ChequeBusinessData.dll
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\ChequeConsumer.pdb
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\EntityFramework.xml
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\Newtonsoft.Json.xml
@@ -31,6 +32,7 @@ C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.Razor.xm
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages.xml
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages.Deployment.xml
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\System.Web.WebPages.Razor.xml
+C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\bin\ChequeBusinessData.pdb
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\obj\Debug\ChequeClient.csprojResolveAssemblyReference.cache
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\obj\Debug\ChequeClient.dll
 C:\Deployments\2015-07-30\ChequeAppsService\ChequeClient\obj\Debug\ChequeClient.pdb

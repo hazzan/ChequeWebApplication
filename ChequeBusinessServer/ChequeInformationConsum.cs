@@ -29,7 +29,12 @@ namespace ChequeBusinessData
 
         public string RestSaveBilling(List<BillingInformation> menuitem)
         {
-            throw new NotImplementedException();
+            foreach (var item in menuitem)
+            {
+                ChequeInformation.saveBillingItem(item);    
+            }
+            
+            return string.Empty;
         }
     }
 }

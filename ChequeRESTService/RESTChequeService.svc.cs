@@ -22,9 +22,9 @@ namespace ChequeRESTService
              var munuItemJson = jsonSerialiser.Serialize(menuItem);
              return munuItemJson;
         }
-        public void SaveMenuItem(int listBillingInfo) 
+        public void SaveMenuItem(List<BillingInformation> listBillingInfo) 
         {
-            //GetChequeInformationConsum().RestSaveBilling(listBillingInfo);
+            GetChequeInformationConsum().RestSaveBilling(listBillingInfo);
         }
 
         public IChequeInformationConsum GetChequeInformationConsum()

@@ -11,9 +11,11 @@ using System.Web.Script.Serialization;
 
 namespace ChequeConsumer
 {
-    public static class MenuItemConsumer
+    public class MenuItemConsumer
     {
-        public static List<MenuItemDto> LoadMenuItem() 
+
+        readonly string customerServiceUri = "http://localhost:59525/RESTChequeService.svc";
+        public List<MenuItemDto> LoadMenuItem() 
         {
             WebClient RESTProxy = new WebClient();
             string jsonData = RESTProxy.DownloadString(new Uri("http://localhost:59525/RESTChequeService.svc/REST/MenuItem"));
@@ -29,25 +31,40 @@ namespace ChequeConsumer
             return objMenuItem; 
         }
 
-        public static string InsertChequeInformation(int listBilling) 
+        public string InsertChequeInformation(List<BillingInformationDto> listBillingDto)  
         {
+            List<BillingInformation> listBilling = new List<BillingInformation>();
+            try
+            {
+                foreach (var item in listBillingDto)
+                {
+                    BillingInformation billInfo = new BillingInformation()
+                    {
+                        Id = item.Id,
+                        MenuID = item.MenuID,
+                        Category = item.Category,
+                        Price = item.Price
+                    };
 
-            ChequeRESTService.RESTChequeServiceClient objRestChequeService = new ChequeRESTService.RESTChequeServiceClient("WSHttpBinding_Service");
-            //List<BillingInformation> listBillingInfo = new List<BillingInformation>();
+                    listBilling.Add(billInfo);
+                }
 
-            //foreach (BillingInformationDto item in listBilling)
-            //{
-            //    BillingInformation billingInfo = new BillingInformation()
-            //    {
-            //        Id = item.Id,
-            //        MenuID = item.MenuID,
-            //        Price = item.Price,
-            //        Category = item.Category
-            //    };
+                using (WebClient wc = new WebClient())
+                {
 
-            //    listBillingInfo.Add(billingInfo);
-            //}
-            objRestChequeService.SaveMenuItem(1);
+                    MemoryStream ms = new MemoryStream();
+                    DataContractJsonSerializer serializerToUplaod = new DataContractJsonSerializer(typeof(List<BillingInformation>));
+                    serializerToUplaod.WriteObject(ms, listBilling);
+                    wc.Headers["Content-type"] = "application/json";
+                    wc.UploadData(customerServiceUri + "SaveMenuItem", "POST", ms.ToArray());
+                }
+            
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
             return string.Empty;
         }
     }

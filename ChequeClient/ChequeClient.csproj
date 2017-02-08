@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\SoapServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -216,6 +221,9 @@
     <None Include="Service References\RESTServiceReference\RESTChequeService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RESTServiceReference\RESTChequeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\RESTServiceReference\RESTChequeService11.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -223,6 +231,13 @@
     <None Include="Service References\RESTServiceReference\configuration91.svcinfo" />
     <None Include="Service References\RESTServiceReference\configuration.svcinfo" />
     <None Include="Service References\RESTServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SoapServiceRef\ChequeSOAPService.disco" />
+    <None Include="Service References\SoapServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\SoapServiceRef\configuration.svcinfo" />
+    <None Include="Service References\SoapServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -239,6 +254,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Billing.cshtml" />
     <Content Include="Views\Home\View1.cshtml" />
+    <None Include="Service References\SoapServiceRef\ChequeSOAPService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\RESTServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SoapServiceRef\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChequeConsumer\ChequeConsumer.csproj">

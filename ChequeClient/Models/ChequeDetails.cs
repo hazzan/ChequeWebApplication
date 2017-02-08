@@ -12,6 +12,8 @@ namespace ChequeClient.Models
         public List<MenuItems> SelectedMenuItem { get; set; } 
         public string LeftselectedItem { get; set; }
         public string RightselectedItem { get; set; }
+        public string Invoicenumber { get; set; }
+        public string InvoiceDate { get; set; }
         public string Status { get; set; }
     }
 }

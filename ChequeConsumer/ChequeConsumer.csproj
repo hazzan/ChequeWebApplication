@@ -72,6 +72,9 @@
     <None Include="Service References\ChequeRESTService\RESTChequeService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ChequeRESTService\RESTChequeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\SoapWebService\ChequeSOAPService.wsdl" />
   </ItemGroup>
   <ItemGroup>

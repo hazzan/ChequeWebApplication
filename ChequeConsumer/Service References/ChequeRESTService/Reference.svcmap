@@ -22,6 +22,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="RESTChequeService.disco" MetadataType="Disco" ID="20372f1d-626f-4e6a-af8e-4fcc2eb6216f" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?disco" />
+    <MetadataFile FileName="RESTChequeService2.xsd" MetadataType="Schema" ID="741482e5-516f-4520-9de3-ac411600d58a" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?xsd=xsd2" />
     <MetadataFile FileName="RESTChequeService.xsd" MetadataType="Schema" ID="12a5ea4b-a730-4ea8-9e06-da8a13448c70" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?xsd=xsd1" />
     <MetadataFile FileName="RESTChequeService1.xsd" MetadataType="Schema" ID="1cd7417f-1ae3-438d-92c5-a8e556475911" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?xsd=xsd0" />
     <MetadataFile FileName="RESTChequeService.wsdl" MetadataType="Wsdl" ID="e5b8c102-d61f-4886-9ebe-62657dceee46" SourceId="1" SourceUrl="http://localhost:59525/RESTChequeService.svc?wsdl" />

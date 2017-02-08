@@ -43,7 +43,7 @@ namespace ChequeBusinessData
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.CommandText = "insertNewUser";
+                    cmd.CommandText = "insertBillDetails";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Connection = connt;
 
