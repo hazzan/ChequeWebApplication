@@ -16,7 +16,9 @@ namespace ChequeConsumer.Dtos
         [DataMember]
         public string MenuDescription { get; set; }
         [DataMember]
-        public string Category { get; set; }  
+        public string Category { get; set; }
+        [DataMember]
+        public decimal Price { get; set; }  
     }
 }
 

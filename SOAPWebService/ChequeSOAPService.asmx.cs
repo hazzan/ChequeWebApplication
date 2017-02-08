@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using ChequeBusinessData;
+using System.Web.Script.Serialization;
+using System.Text;
+using ChequeBusinessData.Entity;
+using System.Xml.Serialization;
 
 namespace ChequeSOAPWebService
 {
@@ -18,9 +23,18 @@ namespace ChequeSOAPWebService
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public string GetAllMenuItems() 
         {
-            return "Hello World";
+            var menuItems = GetChequeInformationConsum().SoapPopulateMenuItem();
+            var stringwriter = new System.IO.StringWriter();
+            var serializer = new XmlSerializer(menuItems.GetType());
+            serializer.Serialize(stringwriter, menuItems);
+            return stringwriter.ToString();
+        }
+
+        public IChequeInformationConsum GetChequeInformationConsum()
+        {
+            return new ChequeInformationConsum();
         }
     }
 }

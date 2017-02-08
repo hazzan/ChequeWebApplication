@@ -15,26 +15,58 @@ namespace ChequeClient.Controllers
         // GET: /Home/
 
         public ActionResult Index()
+        {                        
+            return View();
+        }
+
+        //
+        // GET: /Home/
+
+        public ActionResult RESTBilling() 
         {
             ChequeDetails cheque = new ChequeDetails();
-            List<SelectListItem> menuSelectList = new List<SelectListItem>();
-            var listMenuItem = MenuItemConsumer.loadMenuItem();
+            List<MenuItems> menuSelectList = new List<MenuItems>();
+            var listMenuItem = MenuItemConsumer.LoadMenuItem();
             foreach (MenuItemDto item in listMenuItem)
             {
-                SelectListItem menuItem = new SelectListItem()
+                MenuItems menuItem = new MenuItems()
                 {
-                    Value = item.Id.ToString(),
-                    Text = item.MenuName,
-                    Selected = false
+                    Id = item.Id,
+                    MenuName = item.MenuName,
+                    MenuDescription = item.MenuDescription,
+                    Category = item.Category,
+                    Price = item.Price
                 };
                 menuSelectList.Add(menuItem);
             }
-           // string status = MenuItemConsumer.InsertChequeInformation(6);
+            cheque.ListOfMenu = menuSelectList ?? new List<MenuItems>();
+            cheque.SelectedMenuItem = new List<MenuItems>();
 
-            cheque.ListOfMenu = menuSelectList ?? new List<SelectListItem>();
-            cheque.SelectedMenuItem = new List<SelectListItem>();
-                        
-            return View(cheque);
+            return View("Billing", cheque);
+        }
+
+
+        public ActionResult SOAPBilling() 
+        {
+            ChequeDetails cheque = new ChequeDetails();
+            List<MenuItems> menuSelectList = new List<MenuItems>();
+            var listMenuItem = SOAPServiceMenuItemConsumer.LoadMenuItemUsingSoapService();
+            foreach (MenuItemDto item in listMenuItem)
+            {
+                MenuItems menuItem = new MenuItems()
+                {
+                    Id = item.Id,
+                    MenuName = item.MenuName,
+                    MenuDescription = item.MenuDescription,
+                    Category = item.Category,
+                    Price = item.Price
+                };
+                menuSelectList.Add(menuItem);
+            }
+            cheque.ListOfMenu = menuSelectList ?? new List<MenuItems>();
+            cheque.SelectedMenuItem = new List<MenuItems>();
+
+            return View("Billing", cheque);
         }
 
         public ActionResult SaveBillingInformation(List<BillingDetails> listBillingDetails)

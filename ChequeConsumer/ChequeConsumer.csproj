@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\SoapWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SOAPServiceMenuItemConsumer.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -66,6 +72,7 @@
     <None Include="Service References\ChequeRESTService\RESTChequeService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SoapWebService\ChequeSOAPService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChequeBusinessServer\ChequeBusinessData.csproj">
@@ -75,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ChequeRESTService\" />
+    <WCFMetadataStorage Include="Service References\SoapWebService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ChequeRESTService\RESTChequeService.disco" />
@@ -87,6 +95,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ChequeRESTService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoapWebService\ChequeSOAPService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoapWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoapWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SoapWebService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -10,7 +10,9 @@ namespace ChequeBusinessData
     {
         public IList<MenuItem> SoapPopulateMenuItem()
         {
-            throw new NotImplementedException();
+            IList<MenuItem> listMenuItem = new List<MenuItem>();
+            listMenuItem = ChequeInformation.loadMenuItem();
+            return listMenuItem;
         }
 
         public string SoapSaveBilling(List<MenuItem> menuitem)

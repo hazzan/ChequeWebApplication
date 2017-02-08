@@ -8,17 +8,223 @@
 
 @using (Html.BeginForm())
 {
-    <table>
+    @Html.DisplayName("Invoice Number : 45-43-3443") 
+    <br />
+    @Html.DisplayName("Invoice Date   : " + DateTime.Now.ToString())
+    <br />
+    <br />
+    @*<table>
         <tr>
             <th>
-                 @Html.ListBoxFor(m => m.LeftselectedItem, Model.ListOfMenu, new { size = 10 })
+                 @Html.ListBoxFor(m => m.LeftselectedItem, Model.ListOfMenu, new { size = 20, @style = "width: 100px;" })
+            </th>
+             <th>
+                 <input type="button" value="Add to bill" id="addtoBill" />
             </th>
             <th>
-                @Html.ListBoxFor(m => m.RightselectedItem, Model.SelectedMenuItem, new { size = 10 }) 
+                @Html.ListBoxFor(m => m.RightselectedItem, Model.SelectedMenuItem, new { size = 20, @style = "width: 100px;" })
             </th>
         </tr>
-   </table>
+   </table>  *@ 
+    <section class="container">
+      <div class="left-half">
+        <article>
+          <table id="leftTable">
+              <tr >
+                @Html.DisplayName("Menu Items")
+              </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Menu Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Menu Description")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Category")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Price")
+                    </th>
+                    <th></th>
+                </tr>
 
-    
+        @foreach (var item in Model.ListOfMenu)
+        {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+
+                    <td>
+                        <input type="button" value="Add to bill" class="addtoBill" id= />
+                    </td>
+                </tr>
+        }
+        </table>
+
+        </article>
+      </div>
+      <div class="right-half">
+        <article>
+             <table id="rightTable">
+              <tr >
+                @Html.DisplayName("Billed Items")
+              </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Menu Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Menu Description")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Category")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Price")
+                    </th>
+                    <th></th>
+                </tr>
+
+        @foreach (var item in Model.SelectedMenuItem)
+        {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.EditorFor(modelItem => item.Price)
+                    </td>
+                </tr>
+        }
+        </table>
+        </article>
+      </div>   
+      
+    </section>
+   
     
 }
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        //        $("#addtoBill").click(function () {
+        //            var sel = $("#LeftselectedItem option");
+        //            var listLength = sel.length;
+        //            for (var i = 0; i < listLength; i++) {
+        //                if (sel[i].selected) {
+        //                    var rightList = document.getElementById("RightselectedItem");
+        //                    if (rightList[i] != null) {
+        //                        if (rightList[i].value != sel[i].value) {
+        //                            rightList.add(new Option(sel[i].text, sel[i].value));
+        //                        }
+        //                    }
+        //                    else {
+        //                        rightList.add(new Option(sel[i].text, sel[i].value));
+        //                    }
+        //                }
+        //            }
+        //        })
+
+        $(".addtoBill").click(function () {
+            var tr = $(this).closest("tr").clone();
+            $(this).closest("tr").find('th:last-child, td:last-child').remove()
+
+            var desTable = $("#rightTable");
+            
+
+            //$("#rightTable tr").find('th:last-child, td:last-child').remove()
+        })
+    });
+</script>
+<style type="text/css">
+    /* Pen-specific styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+section {
+  color: #fff;
+  text-align: center;
+}
+
+div {
+  height: 50%;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Pattern styles */
+.container {
+  display: table;
+  width: 100%;
+}
+
+.left-half {
+  background-color: #ff9e2c;
+  position: absolute;
+  left: 0px;
+  width: 50%;
+}
+
+.right-half {
+  background-color: #b6701e;
+  position: absolute;
+  right: 0px;
+  width: 50%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    background-color: #4CAF50
+}
+
+
+
+th {
+    background-color: #050505;
+    color: white;
+}
+</style>

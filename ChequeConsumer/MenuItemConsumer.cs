@@ -13,7 +13,7 @@ namespace ChequeConsumer
 {
     public static class MenuItemConsumer
     {
-        public static List<MenuItemDto> loadMenuItem()
+        public static List<MenuItemDto> LoadMenuItem() 
         {
             WebClient RESTProxy = new WebClient();
             string jsonData = RESTProxy.DownloadString(new Uri("http://localhost:59525/RESTChequeService.svc/REST/MenuItem"));

@@ -130,6 +130,7 @@
     </Compile>
     <Compile Include="Models\ChequeDetails.cs" />
     <Compile Include="Models\BillingDetails.cs" />
+    <Compile Include="Models\MenuItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\RESTServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -236,6 +237,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Billing.cshtml" />
+    <Content Include="Views\Home\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

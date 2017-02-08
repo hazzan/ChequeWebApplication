@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Web;
 
-namespace ChequeBusinessData.Entity
+namespace ChequeClient.Models
 {
-    public class MenuItem
+    public class MenuItems
     {
         public long Id { get; set; }
         public string MenuName { get; set; }

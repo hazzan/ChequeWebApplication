@@ -28,6 +28,7 @@ namespace ChequeBusinessData
                         menuItem.MenuName = reader.GetString(1);
                         menuItem.MenuDescription = reader.GetString(2);
                         menuItem.Category = reader.GetString(3);
+                        menuItem.Price = reader.GetDecimal(4);
                         lstMenuItem.Add(menuItem);
                     }
 
